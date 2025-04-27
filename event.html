@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divenic Team</title>
     <link rel="stylesheet" href="asset/style/style.css">
+    <link rel="shortcut icon" href="asset/img/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -22,7 +23,7 @@
 
 <body>
     <div id="preloader">
-        <div class="loader">....</div>
+        <div class="loader"></div>
     </div>
 
     <nav>
@@ -124,13 +125,19 @@
         </section>
 
         <section id="blog" class="blog-section">
-            <div class="buttons-card">
-                <a href="event.html" class="nav-card" data-target="event">Event's</a>
-                <a href="mentor.html" class="nav-card" data-target="mentor">Mentor</a>
-                <a href="member.html" class="nav-card" data-target="member">Members</a>
-                <a href="gallery.html" class="nav-card" data-target="gallery">Gallery</a>
-                <a href="gallery.html" class="nav-card" data-target="gallery">Gallery</a>
-            </div>
+            <ul class="buttons-card-wrapper">
+                
+                <li class="buttons-card">
+                    <a href="event.html" class="button-card" data-target="event">Event's</a>
+                    <a href="mentor.html" class="button-card" data-target="mentor">Mentor</a>
+                    <a href="member.html" class="button-card" data-target="member">Members</a>
+                    <a href="gallery.html" class="button-card" data-target="gallery">Gallery</a>
+                    <a href="gallery.html" class="button-card" data-target="gallery">Gallery</a>
+                </li>
+                
+                <button class="scroll-btn left">&#10094;</button>
+                <button class="scroll-btn right">&#10095;</button>
+            </ul>
 
             <div id="event" class="event-card">
                 <div class="title-event">

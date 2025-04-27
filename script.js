@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.navlink');
   const sections = document.querySelectorAll('section');
   const menuBtn = document.getElementById("menu-btn");
-  const closeBtn = document.getElementById("close-btn");
   const sidebar = document.getElementById("sidebar");
   const slides = document.querySelectorAll(".slide");
   const dotsContainer = document.querySelector(".dots-container");
@@ -61,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 500); // hilangkan setelah 0.5 detik
     }
   });
-
 
   function scrollNavbar() {
     const navbar = document.querySelector("nav");
@@ -137,29 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
       closeBtn.classList.add("rotate-in"); // Tambahkan animasi pada tombol close
       closeBtn.style.opacity = "1";
     }, 300);
-  });
-
-  // Event listener untuk tombol silang (✖)
-  closeBtn.addEventListener("click", () => {
-    // Tambahkan animasi keluar pada tombol close
-    closeBtn.classList.remove("rotate-in");
-    closeBtn.classList.add("rotate-left");
-
-    // Sembunyikan sidebar
-    sidebar.classList.remove("show-sidebar");
-
-    closeBtn.style.opacity = "0";
-    setTimeout(() => {
-      closeBtn.style.visibility = "hidden";
-      closeBtn.classList.remove("rotate-left"); // Reset animasi
-      menuBtn.style.visibility = "visible";
-      menuBtn.classList.add("rotate-back"); // Tambahkan rotasi balik pada hamburger
-    }, 300);
-
-    // Reset rotasi hamburger setelah muncul kembali
-    setTimeout(() => {
-      menuBtn.classList.remove("rotate-back");
-    }, 600);
   });
 
   let slideIndex = 0;
@@ -259,14 +234,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const clientWidth = buttonsCard.clientWidth;
 
   // Tombol kiri muncul kalau sudah tidak di posisi paling kiri
-  if (scrollLeft > 5) {
+  if (scrollLeft > 2) {
     scrollLeftBtn.classList.add('show');
   } else {
     scrollLeftBtn.classList.remove('show');
   }
 
   // Tombol kanan muncul kalau masih ada yang belum terlihat di kanan
-  if (scrollLeft + clientWidth < scrollWidth - 5) {
+  if (scrollLeft + clientWidth < scrollWidth - 2) {
     scrollRightBtn.classList.add('show');
   } else {
     scrollRightBtn.classList.remove('show');
@@ -298,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then((html) => {
         const contentDiv = document.getElementById('content');
+        console.log("konten bisa dimuat");
         contentDiv.innerHTML = html;
   
         // Update tombol aktif setelah konten dimuat
@@ -309,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   
   function setActiveButton(activeFile) {
-    document.querySelectorAll('.nav-card').forEach((link) => {
+    document.querySelectorAll('.button-card').forEach((link) => {
       if (link.getAttribute('data-file') === activeFile) {
         link.classList.add('active');
       } else {

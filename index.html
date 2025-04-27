@@ -37,10 +37,14 @@
         </ul>
 
         <!-- Responsive navbar -->
-        <button id="menu-btn" class="hamburger-icon">&#9776;</button>
+        <input type="checkbox" id="menu-btn">
+        <label for="menu-btn" class="hamburger-icon">
+            <span class="bar bar-top"></span>
+            <span class="bar bar-middle"></span>
+            <span class="bar bar-bottom"></span>
+        </label>
 
         <div id="sidebar" class="sidebar">
-            <button id="close-btn" class="close-icon">&times;</button>
             <ul class="menu">
                 <li><a href="#home" class="navlink">Home</a></li>
                 <li><a href="#about" class="navlink">About</a></li>
@@ -122,19 +126,19 @@
         </section>
 
         <section id="blog" class="blog-section">
-            <div class="buttons-card-wrapper">
+            <ul class="buttons-card-wrapper">
                 
-                <div class="buttons-card">
-                    <a href="event.html" class="nav-card" data-target="event">Event's</a>
-                    <a href="mentor.html" class="nav-card" data-target="mentor">Mentor</a>
-                    <a href="member.html" class="nav-card" data-target="member">Members</a>
-                    <a href="gallery.html" class="nav-card" data-target="gallery">Gallery</a>
-                    <a href="gallery.html" class="nav-card" data-target="gallery">Gallery</a>
-                </div>
+                <li class="buttons-card">
+                    <a href="event.html" class="button-card" data-target="event">Event's</a>
+                    <a href="mentor.html" class="button-card" data-target="mentor">Mentor</a>
+                    <a href="member.html" class="button-card" data-target="member">Members</a>
+                    <a href="gallery.html" class="button-card" data-target="gallery">Gallery</a>
+                    <a href="gallery.html" class="button-card" data-target="gallery">Gallery</a>
+                </li>
                 
                 <button class="scroll-btn left">&#10094;</button>
                 <button class="scroll-btn right">&#10095;</button>
-            </div>
+            </ul>
 
             <div id="event" class="event-card">
                 <div class="title-event">
