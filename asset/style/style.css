@@ -200,7 +200,7 @@ nav.Scrolled {
     justify-content: end;
     width: 30px;
     margin: auto;
-    display: block;
+    display: none;
     height: calc(4px * 3 + 11px * 2);
 }
 
@@ -303,7 +303,7 @@ nav.Scrolled {
 
 /* Background Blur untuk Mobile */
 .slider-background {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -313,7 +313,7 @@ nav.Scrolled {
     filter: blur(15px);
     z-index: 90;
     display: none;
-    outline: 3px dashed blue;
+    background-color: blue;
 }
 
 /* Main Slider */
@@ -328,18 +328,16 @@ nav.Scrolled {
     display: none;
     width: 100%;
     height: 100%;
-    animation: smoothSlide .5s ease;
+    animation: smoothSlide .5s ease forwards;
 }
 
 @keyframes smoothSlide {
     0% {
         transform: translateX(100%);
-        opacity: 0;
     }
 
     100% {
         transform: translateX(0);
-        opacity: 1;
     }
 }
 
@@ -360,7 +358,7 @@ nav.Scrolled {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .prev:hover,
@@ -369,11 +367,11 @@ nav.Scrolled {
 }
 
 .prev {
-    left: 1rem;
+    left: 1.23rem;
 }
 
 .next {
-    right: 1rem;
+    right: 1.23rem;
 }
 
 /* Dots Navigation */
@@ -447,7 +445,7 @@ nav.Scrolled {
     box-shadow: rgba(0, 0, 0, .5);
 }
 
-.about-item h3 {
+.about-item figcaption {
     /* font: bold 1.8rem var(--title-font); laptop sisanya monitor */
     font: bold 2.1rem var(--title-font);
     color: #FFFFFF;
@@ -472,7 +470,7 @@ nav.Scrolled {
     color: #FFFFFF;
 }
 
-.about-content:hover>.desc-item {
+.about-content:hover > .desc-item {
     transform: translateY(-145px);
     pointer-events: all;
     transition: all 0.3s ease;
@@ -651,6 +649,7 @@ nav.Scrolled {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    /* kalau dipisah: top gapnya 360px */
     gap: 80px;
 }
 
@@ -904,7 +903,7 @@ nav.Scrolled {
     }
 
     .hamburger-icon {
-        display: inline-block;
+        display: block;
     }
 
     .nav-menu {
@@ -950,7 +949,7 @@ nav.Scrolled {
         height: 170px;
     }
 
-    .about-item h3 {
+    .about-item figcaption {
         font: bold 1.5rem var(--title-font);
     }
 

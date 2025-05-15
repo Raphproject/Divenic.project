@@ -12,18 +12,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<header class="intro">
-    <svg>
-        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-            DIVENIC PRESENT
-        </text>
-    </svg>
-</header>
 
 <body>
     <div id="preloader">
-        <div class="loader">....</div>
+        <div class="loader"></div>
     </div>
+    
+    <header class="intro">
+        <svg>
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                DIVENIC PRESENT
+            </text>
+        </svg>
+    </header>
 
     <nav>
         <a href="index.html" id="logo" class="logo">
@@ -62,19 +63,19 @@
 
                 <div class="slider">
                     <div class="slide">
-                        <img src="asset/img/home-1.jpg" alt="Slide 1">
+                        <img src="asset/img/home-1.webp" alt="Slide 1" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-2.jpg" alt="Slide 2">
+                        <img src="asset/img/home-2.webp" alt="Slide 2" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-3.jpg" alt="Slide 3">
+                        <img src="asset/img/home-3.webp" alt="Slide 3" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-4.jpg" alt="Slide 4">
+                        <img src="asset/img/home-4.webp" alt="Slide 4" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-5.jpg" alt="Slide 5">
+                        <img src="asset/img/home-5.webp" alt="Slide 5" loading="eager">
                     </div>
 
                     <!-- Tombol Prev & Next -->
@@ -90,38 +91,38 @@
         <section id="about" class="about-section">
             <h2>About Divenic</h2>
             <div class="about-container">
-                <div class="about-content">
-                    <div class="about-item">
-                        <img src="asset/img/about-1.JPG" alt="about-1">
-                        <h3>Diversity</h3>
-                    </div>
+                <article class="about-content">
+                    <figure class="about-item">
+                        <img src="asset/img/about-1.webp" alt="about-1" loading="lazy">
+                        <figcaption>Diversity</figcaption>
+                    </figure>
                     <div class="desc-item">
                         <p>menciptakan persatuan diatas keberagaman dalam ikatan pertemanan
                             yang mampu membangun kesolidaritasan dan mampu menyebarkan kebaikan.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="about-content">
-                    <div class="about-item">
-                        <img src="asset/img/about-2.JPG" alt="about-2">
-                        <h3>Unity</h3>
-                    </div>
+                <article class="about-content">
+                    <figure class="about-item">
+                        <img src="asset/img/about-2.webp" alt="about-2" loading="lazy">
+                        <figcaption>Unity</figcaption>
+                    </figure>
                     <div class="desc-item">
                         <p>banyaknya keberagaman yg dapat menciptakan persatuan dan melahirkan rasa saling percaya
                             antar satu sama lain disaat kita melalui banyak kisah bersama dalam ikatan persahabatan.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="about-content">
-                    <div class="about-item">
-                        <img src="asset/img/about-3.JPG" alt="about-3">
-                        <h3>Camaraderie</h3>
-                    </div>
+                <article class="about-content">
+                    <figure class="about-item">
+                        <img src="asset/img/about-3.webp" alt="about-3" loading="lazy">
+                        <figcaption>Camaraderie</figcaption>
+                    </figure>
                     <div class="desc-item">
                         <p>perasaan percaya antar anggota dalam suatu kelompok yang saling mengenal dan akan melalui
                             masa-masa bersama.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -132,7 +133,7 @@
                     <a href="event.html" class="button-card" data-target="event">Event's</a>
                     <a href="mentor.html" class="button-card" data-target="mentor">Mentor</a>
                     <a href="member.html" class="button-card" data-target="member">Members</a>
-                    <a href="gallery.html" class="button-card" data-target="gallery">Gallery</a>
+                    <a href="Memory.html" class="button-card" data-target="memory">Memory</a>
                     <a href="gallery.html" class="button-card" data-target="gallery">Gallery</a>
                 </li>
                 
@@ -145,68 +146,82 @@
                     <h2>Our event</h2>
                 </div>
                 <div class="event-content">
-                    <div class="event-item">
-                        <img src="asset/img/odl.jpg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/odl.webp" alt="Outdoor Learning" loading="lazy">
+                        <figcaption class="card-desc">
                             Outdoor Learning
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/Drama.jpeg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/Drama.webp" alt="Drama 17 Agustus" loading="lazy">
+                        <figcaption class="card-desc">
                             Drama 17 Agustus
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/DSC.jpeg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/DSC.webp" alt="Dafi Scout Chalangge" loading="lazy">
+                        <figcaption class="card-desc">
                             Dafi Scout Chalangge
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/ILP.jpeg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/ILP.webp" alt="Indonesian Leadership Program" loading="lazy">
+                        <figcaption class="card-desc">
                             Indonesian Leadership Program
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/Difest.jpeg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/Difest.webp" alt="Iftar at Dafi" loading="lazy">
+                        <figcaption class="card-desc">
                             Islamic Festival Ramadhan at DAFI
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/GLP.jpeg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/GLP.webp" alt="Global Leadership Program" loading="lazy">
+                        <figcaption class="card-desc">
                             Global Leadership Program
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/Osfest.jpeg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/matsama.webp" alt="Matsama" loading="lazy">
+                        <figcaption class="card-desc">
+                            Matsama Commite
+                        </figcaption>
+                    </figure>
+
+                    <figure class="event-item">
+                        <img src="asset/img/Osfest.webp" alt="Osidafi Festival" loading="lazy">
+                        <figcaption class="card-desc">
                             Osidafi Festival
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/tahfidz.jpg" alt="">
-                        <div class="card-desc">
-                            Final Exam of Tahfidz
-                        </div>
-                    </div>
+                    <figure class="event-item">
+                        <img src="asset/img/tahfidz.webp" alt="Standardization of Tahfidz" loading="lazy">
+                        <figcaption class="card-desc">
+                            Standardization of Tahfidz
+                        </figcaption>
+                    </figure>
 
-                    <div class="event-item">
-                        <img src="asset/img/mr.jpg" alt="">
-                        <div class="card-desc">
+                    <figure class="event-item">
+                        <img src="asset/img/mr.webp" alt="Motivation Rising" loading="lazy">
+                        <figcaption class="card-desc">
                             Motivation Rising
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="event-item">
+                        <img src="asset/img/bukber.webp" alt="iftar gathering" loading="lazy">
+                        <figcaption class="card-desc">
+                            iftar gathering
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>

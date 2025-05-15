@@ -37,16 +37,18 @@
         </ul>
 
         <!-- Responsive navbar -->
-        <button id="menu-btn" class="hamburger-icon">&#9776;</button>
+        <input type="checkbox" id="menu-btn">
+        <label for="menu-btn" class="hamburger-icon">
+            <span class="bar bar-top"></span>
+            <span class="bar bar-middle"></span>
+            <span class="bar bar-bottom"></span>
+        </label>
 
         <div id="sidebar" class="sidebar">
-            <button id="close-btn" class="close-icon">&times;</button>
-            <ul>
-                <li class="menu">
-                    <li><a href="#home" class="navlink">Home</a></li>
-                    <li><a href="#about" class="navlink">About</a></li>
-                    <li><a href="#blog" class="navlink">Blog</a></li>
-                </li>
+            <ul class="menu">
+                <li><a href="#home" class="navlink">Home</a></li>
+                <li><a href="#about" class="navlink">About</a></li>
+                <li><a href="#blog" class="navlink">Blog</a></li>
             </ul>
         </div>
     </nav>
@@ -57,28 +59,28 @@
             <div class="slider-container">
                 <!-- Background Blur untuk Mobile -->
                 <div class="slider-background"></div>
-        
+
                 <div class="slider">
                     <div class="slide">
-                        <img src="asset/img/home-1.jpg" alt="Slide 1">
+                        <img src="asset/img/home-1.webp" alt="Slide 1" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-2.jpg" alt="Slide 2">
+                        <img src="asset/img/home-2.webp" alt="Slide 2" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-3.jpg" alt="Slide 3">
+                        <img src="asset/img/home-3.webp" alt="Slide 3" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-4.jpg" alt="Slide 4">
+                        <img src="asset/img/home-4.webp" alt="Slide 4" loading="eager">
                     </div>
                     <div class="slide">
-                        <img src="asset/img/home-5.jpg" alt="Slide 5">
+                        <img src="asset/img/home-5.webp" alt="Slide 5" loading="eager">
                     </div>
-        
+
                     <!-- Tombol Prev & Next -->
                     <button class="prev">&#10094;</button>
                     <button class="next">&#10095;</button>
-        
+
                     <!-- Dots Navigation -->
                     <div id="dot" class="dots-container"></div>
                 </div>
@@ -88,38 +90,38 @@
         <section id="about" class="about-section">
             <h2>About Divenic</h2>
             <div class="about-container">
-                <div class="about-content">
-                    <div class="about-item">
-                        <img src="asset/img/about-1.JPG" alt="about-1">
-                        <h3>Diversity</h3>
-                    </div>
+                <article class="about-content">
+                    <figure class="about-item">
+                        <img src="asset/img/about-1.webp" alt="about-1" loading="lazy">
+                        <figcaption>Diversity</figcaption>
+                    </figure>
                     <div class="desc-item">
                         <p>menciptakan persatuan diatas keberagaman dalam ikatan pertemanan
                             yang mampu membangun kesolidaritasan dan mampu menyebarkan kebaikan.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="about-content">
-                    <div class="about-item">
-                        <img src="asset/img/about-2.JPG" alt="about-2">
-                        <h3>Unity</h3>
-                    </div>
+                <article class="about-content">
+                    <figure class="about-item">
+                        <img src="asset/img/about-2.webp" alt="about-2" loading="lazy">
+                        <figcaption>Unity</figcaption>
+                    </figure>
                     <div class="desc-item">
                         <p>banyaknya keberagaman yg dapat menciptakan persatuan dan melahirkan rasa saling percaya
                             antar satu sama lain disaat kita melalui banyak kisah bersama dalam ikatan persahabatan.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="about-content">
-                    <div class="about-item">
-                        <img src="asset/img/about-3.JPG" alt="about-3">
-                        <h3>Camaraderie</h3>
-                    </div>
+                <article class="about-content">
+                    <figure class="about-item">
+                        <img src="asset/img/about-3.webp" alt="about-3" loading="lazy">
+                        <figcaption>Camaraderie</figcaption>
+                    </figure>
                     <div class="desc-item">
                         <p>perasaan percaya antar anggota dalam suatu kelompok yang saling mengenal dan akan melalui
                             masa-masa bersama.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
