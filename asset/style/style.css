@@ -60,7 +60,7 @@ body {
     justify-content: center;
     align-items: center;
     background: var(--intro-color);
-    z-index: 9999;
+    z-index: 999;
     opacity: 1;
     transition: opacity 1s ease;
 }
@@ -117,7 +117,7 @@ svg text {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
+    z-index: 999;
 }
 
 .loader {
@@ -156,7 +156,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background: var(--element-color);
-    z-index: 999;
+    z-index: 99;
     transition: top .395s ease;
 }
 
@@ -194,77 +194,66 @@ nav.Scrolled {
 }
 
 /* Responsive */
-.hamburger-icon {
+.menu-btn {
     position: relative;
-    right: 0;
-    justify-content: end;
-    width: 30px;
-    margin: auto;
-    display: none;
-    height: calc(4px * 3 + 11px * 2);
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
 }
 
-#menu-btn {
+.menu-btn input {
     display: none;
 }
 
-.bar {
+.menu-btn span {
+    display: block;
     position: absolute;
-    left: 0;
-    right: 0;
     height: 4px;
-    border-radius: calc(4px / 2);
-    background: var(--title-color);
-    color: inherit;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
     opacity: 1;
-    transition: none .35s cubic-bezier(.5, -0.35, .35, 1.5) 0s;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    z-index: 100;
 }
 
-.bar-top {
-    bottom: calc(50% + 11px + 4px/ 2);
-    transition-property: bottom, transform;
-    transition-delay: calc(0s + 0.35s), 0s;
+.menu-btn span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
 }
 
-.bar-middle {
-    top: calc(50% - 4px / 2);
-    transition-property: opacity;
-    transition-delay: calc(0s + 0.35s), 0s;
+.menu-btn span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
 }
 
-.bar-bottom {
-    top: calc(50% + 11px + 4px/ 2);
-    transition-property: top, transform;
-    transition-delay: calc(0s + 0.35s), 0s;
+.menu-btn span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
 }
 
-#checkbox:checked + .hamburger-icon .bar-top {
-    bottom: calc(50% - 4px / 2);
-    transform: rotate(135deg);
-    transition-delay: calc(0s + 0.35s), 0s;
+.menu-btn input:checked~span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
 }
 
-#checkbox:checked + .hamburger-icon .bar-middle {
+.menu-btn input:checked~span:nth-of-type(2) {
+    width: 0%;
     opacity: 0;
-    transition-duration: 0s;
-    transition-delay: calc(0s + 0.35s), 0s;
 }
 
-#checkbox:checked + .hamburger-icon .bar-bottom {
-    top: calc(50% - 4px / 2);
-    transform: rotate(225deg);
-    transition-delay: calc(0s + 0.35s), 0s;
+.menu-btn input:checked~span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
 }
-  .sidebar .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .sidebar .menu  {
-    padding: 15px;
-    text-align: start;
-  }
 
 .sidebar {
     position: fixed;
@@ -278,7 +267,16 @@ nav.Scrolled {
     backdrop-filter: blur(10px);
     border-radius: 20px 0 0 20px;
     transition: right .3s ease-in-out;
-    z-index: 990;
+    z-index: 99;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 25px 0;
+}
+
+.menu li {
+    margin: 15px 0;
 }
 
 .show-sidebar {
@@ -311,9 +309,8 @@ nav.Scrolled {
     background-size: cover;
     background-position: bottom center;
     filter: blur(15px);
-    z-index: 90;
+    z-index: 95;
     display: none;
-    background-color: blue;
 }
 
 /* Main Slider */
@@ -367,11 +364,11 @@ nav.Scrolled {
 }
 
 .prev {
-    left: 1.23rem;
+    left: 1.2rem;
 }
 
 .next {
-    right: 1.23rem;
+    right: 1.2rem;
 }
 
 /* Dots Navigation */
@@ -399,7 +396,7 @@ nav.Scrolled {
 /* about */
 .about-section {
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     padding: 30px 0 0 0;
     /* font: bold 1.6rem var(--title-font); laptop sisanya monitor */
     font: bold 1.9rem var(--title-font);
@@ -409,7 +406,7 @@ nav.Scrolled {
 
 .about-container {
     display: flex;
-    height: 100dvh;
+    height: 100%;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
@@ -435,7 +432,7 @@ nav.Scrolled {
     width: 100%;
     height: 100%;
     transform: translateY(-80px);
-    z-index: 99;
+    z-index: 95;
 }
 
 .about-item img {
@@ -470,7 +467,7 @@ nav.Scrolled {
     color: #FFFFFF;
 }
 
-.about-content:hover > .desc-item {
+.about-content:hover>.desc-item {
     transform: translateY(-145px);
     pointer-events: all;
     transition: all 0.3s ease;
@@ -690,7 +687,7 @@ nav.Scrolled {
 
 .mentor-card:hover .mentor-item {
     opacity: 1;
-    width: 100%;  
+    width: 100%;
     transform: translateY(0%);
     background-color: rgba(0, 0, 0, .5);
 }
@@ -806,7 +803,7 @@ nav.Scrolled {
 
 .member-card:hover .member-item {
     opacity: 1;
-    width: 100%;  
+    width: 100%;
     transform: translateY(0%);
     background-color: rgba(0, 0, 0, .5);
 }
@@ -902,7 +899,7 @@ nav.Scrolled {
         font-size: 2.3rem;
     }
 
-    .hamburger-icon {
+    .menu-btn {
         display: block;
     }
 
@@ -910,12 +907,15 @@ nav.Scrolled {
         display: none;
     }
 
+    .sidebar .menu {
+        font: bold 1.3rem #B65D3D;
+    }
+
     .scroll-btn {
         display: block;
     }
 
     .slider-background {
-        height: auto;
         display: block;
     }
 
@@ -931,7 +931,7 @@ nav.Scrolled {
     }
 
     .slide img {
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .about-section {

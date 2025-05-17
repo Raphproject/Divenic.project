@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const logo = document.getElementById("logo");
   const navLinks = document.querySelectorAll('.navlink');
   const sections = document.querySelectorAll('section');
-  const menuBtn = document.getElementById("menu-btn");
+  const checkbox = document.getElementById("menu-btn");
   const sidebar = document.getElementById("sidebar");
   const slides = document.querySelectorAll(".slide");
   const dotsContainer = document.querySelector(".dots-container");
@@ -120,21 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Event listener untuk hamburger menu (☰)
-  menuBtn.addEventListener("click", () => {
-    // Tambahkan class rotasi pada hamburger
-    menuBtn.classList.add("rotate-right");
-
-    // Tampilkan sidebar dan tombol close
-    sidebar.classList.add("show-sidebar");
-
-    // Sembunyikan hamburger setelah rotasi
-    setTimeout(() => {
-      menuBtn.style.visibility = "hidden";
-      menuBtn.classList.remove("rotate-right"); // Reset animasi
-      closeBtn.style.visibility = "visible";
-      closeBtn.classList.add("rotate-in"); // Tambahkan animasi pada tombol close
-      closeBtn.style.opacity = "1";
-    }, 300);
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      sidebar.classList.add("show-sidebar");
+    } else {
+      sidebar.classList.remove("show-sidebar");
+    }
   });
 
   let slideIndex = 0;
