@@ -1,19 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
   const intro = document.querySelector('.intro');
-  const mainContent = document.querySelector('.main-content');
   const introShown = localStorage.getItem("introShown");
+  const mainContent = document.querySelector('.main-content');
   const nav = document.querySelector('nav');
   const logo = document.getElementById("logo");
+  const sidebar = document.getElementById("sidebar");
+  const checkbox = document.getElementById("menu-btn");
   const navLinks = document.querySelectorAll('.navlink');
   const sections = document.querySelectorAll('section');
-  const checkbox = document.getElementById("menu-btn");
-  const sidebar = document.getElementById("sidebar");
   const slides = document.querySelectorAll(".slide");
   const dotsContainer = document.querySelector(".dots-container");
   const sliderBackground = document.querySelector(".slider-background");
   const buttonsCard = document.querySelector('.buttons-card');
   const scrollLeftBtn = document.querySelector('.scroll-btn.left');
   const scrollRightBtn = document.querySelector('.scroll-btn.right');
+
+  setTimeout(() => {
+  // misalnya, kalau loading lebih dari 5 detik
+  if (!mainContent || !mainContent.classList.contains("loaded")) {
+    document.getElementById("preloader").style.display = "block";
+    }
+  }, 5000); // 5 detik
+
+  window.addEventListener("error", function (e) {
+    document.getElementById("fallback-page").style.display = "block";
+  });
 
   if (!introShown) {
     // Jika intro belum pernah ditampilkan, tampilkan intro

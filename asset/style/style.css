@@ -117,20 +117,22 @@ svg text {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .loader {
     width: 50px;
     height: 50px;
-    border: 5px solid linear-gradient(120deg #FFF8E1, #EAF7EE);
-    border-top: 5px solid transparent;
+    border: 5px solid #FFF8E1;
+    border-top: 5px solid #FF8C42;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    to {
+    from {
+        transform: rotate(0deg);
+    } to {
         transform: rotate(360deg);
     }
 }
@@ -138,7 +140,6 @@ svg text {
 /* Main Content Styling */
 .main-content {
     display: block;
-    /* Menampilkan konten utama setelah halaman dimuat */
     opacity: 1;
     transition: opacity 1s ease;
     overflow: hidden;
