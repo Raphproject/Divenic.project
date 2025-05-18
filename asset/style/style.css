@@ -200,10 +200,6 @@ nav.Scrolled {
     height: 30px;
     background: transparent;
     cursor: pointer;
-    display: block;
-}
-
-.menu-btn input {
     display: none;
 }
 
