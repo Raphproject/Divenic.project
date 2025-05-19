@@ -956,7 +956,7 @@ nav.Scrolled {
         font: bold 1.5rem var(--title-font);
     }
 
-    .about-content:hover>.desc-item {
+    .about-content:hover > .desc-item {
         transform: translateY(-130px);
     }
 
