@@ -908,7 +908,7 @@ nav.Scrolled {
     
 }
 
-@media screen and (min-width: 413px) and (max-width: 430px) {
+@media screen and (max-width: 476px) {
     svg text {
         font-size: 2.3rem;
     }
