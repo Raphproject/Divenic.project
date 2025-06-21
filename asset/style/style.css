@@ -895,7 +895,20 @@ nav.Scrolled {
     box-shadow: rgba(0, 0, 0, .5);
 }
 
-@media screen and (max-width: 476px) {
+@media screen and (max-width: 360px) {
+
+}
+
+/* min-width 361px */
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 412px) {
+    
+}
+
+@media screen and (min-width: 413px) and (max-width: 430px) {
     svg text {
         font-size: 2.3rem;
     }
@@ -1036,6 +1049,22 @@ nav.Scrolled {
         columns: 2;
         margin: 10px;
     }
+}
 
-    /* di crosscheck besok sekalian di onlinekan, sama tanya arek" soal revisi setelah di onlinekan */
+@media screen and (max-width: 600px) {
+        
+}
+
+@media screen and (max-width: 768px) {
+        
+}
+
+@media screen and (max-width: 1024px) {
+        
+}
+
+@media screen and (min-width: 1025px) {
+    svg text {
+        font-size: 3.5rem;
+    }
 }
