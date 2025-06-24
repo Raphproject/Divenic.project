@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font: bold 1.25rem 'Lora', serif;
+    background: url('../img/dafi-bg.png') no-repeat center center; /* jika file folder naik satu, di bagian asset, cukup tambahkan (../) dan lokasi file akan keluar */
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 65px;
+    padding: 12px 15px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #FAD4C0, #FFE4C4);
+    z-index: 1;
+}
+
+.logo img {
+    width: 67px;
+    height: 65px
+}
+
+.nav-menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    padding: 0 15px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.17rem;
+}
+
+.navlink {
+    color: #B65D3D;
+    font: bold 1.25rem #B65D3D;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.nav-menu .navlink:hover,
+.nav-menu .navlink.active {
+    border-bottom: 4px solid #b65d3d;
+    padding: 5px 0;
+    transition: all .390s ease-in-out;
+}
+
+/* Responsive */
+.menu-btn {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.menu-btn span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #333446;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    z-index: 5;
+}
+
+.menu-btn span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.menu-btn span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.menu-btn span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.menu-btn input:checked~span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.menu-btn input:checked~span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.menu-btn input:checked~span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100%;
+    background: var(--element-color);
+    padding: 2rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px 0 0 20px;
+    transition: right .3s ease-in-out;
+    z-index: 10;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 25px 0;
+}
+
+.menu li {
+    margin: 15px 0;
+}
+
+.show-sidebar {
+    right: 0;
+}
+
+.page-404 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.title {
+    font-size: 8rem;
+    color: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+.title h4 {
+    font-size: 4.27rem;
+}
+
+text {
+    position: absolute;
+    left: 50%;
+    bottom: 37%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #FFFFFF;
+}
+
+button {
+    font-size: 1.4rem;
+    position: absolute;
+    left: 50%;
+    bottom: 28%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background: linear-gradient(45deg, #FFBB76, #FF8C42);
+    display: flex;
+    justify-content: center;
+    border: none;
+    box-shadow: 0px 0px 5px #FFFFFF;
+}
+
+button a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 8px;
+}
+
+@media screen and (max-width: 476px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .sidebar .menu {
+        font: bold 1.3rem #B65D3D;
+    }
+    
+    .title {
+        font-size: 4rem;
+        top: 20%;
+    }
+
+    .title h4 {
+        font-size: 2rem;
+    }
+
+    text {
+        font-size: .8rem;
+        bottom: 38%;
+    }
+
+    button {
+        font-size: .9rem;
+        bottom: 30%;
+    }
+}

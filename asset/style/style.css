@@ -5,7 +5,7 @@
     --primary-font: "Opens sans", sans-serif;
     --primary-color: linear-gradient(120deg, #FFF8E1 0%, #FFF8E1 40%, #EAF7EE 55%, #EAF7EE 100%);
     --intro-font: "Lora", serif;
-    --intro-color: linear-gradient(45deg, #314E52, #0f0f0f);
+    --intro-color: linear-gradient(45deg, #314E52, #243642);
     --element-font: "Montserrat", sans-serif;
     --element-color: linear-gradient(45deg, #FAD4C0, #FFE4C4);
     --title-font: "Playfair Display", serif;
@@ -74,12 +74,12 @@ svg text {
     animation: stroke 3s ease-in-out forwards;
     stroke-width: 2;
     stroke: rgba(255, 242, 215, 0.979);
-    font: bold 7rem var(--intro-font);
+    font: bold 8rem var(--intro-font);
 }
 
 @keyframes stroke {
     0% {
-        fill: rgba(58, 56, 56, 0);
+        fill: rgba(238, 238, 238, 0);
         stroke: rgba(95, 158, 160, 0.979);
         stroke-dashoffset: 25%;
         stroke-dasharray: 0 50%;
@@ -87,19 +87,19 @@ svg text {
     }
 
     70% {
-        fill: rgba(58, 56, 56, 0);
+        fill: rgba(238, 238, 238, 0);
         stroke: rgba(255, 242, 215, 0.979);
     }
 
     80% {
-        fill: rgba(58, 56, 56, 0);
+        fill: rgba(238, 238, 238, 0);
         stroke: rgba(255, 242, 215, 0.979);
         stroke-width: 3;
     }
 
     100% {
         fill: rgba(255, 224, 181, 0.989);
-        stroke: rgba(60, 58, 58, 0);
+        stroke: rgba(240, 240, 240, 0);
         stroke-dashoffset: -25%;
         stroke-dasharray: 50% 0;
         stroke-width: 0;
@@ -189,7 +189,7 @@ nav.Scrolled {
 
 .nav-menu .navlink:hover,
 .nav-menu .navlink.active {
-    border-bottom: 4px solid #B65D3D;
+    border-bottom: 4px solid #b65d3d;
     padding: 5px 0;
     transition: all .390s ease-in-out;
 }
@@ -213,7 +213,7 @@ nav.Scrolled {
     position: absolute;
     height: 4px;
     width: 100%;
-    background: black;
+    background: #333446;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -391,7 +391,7 @@ nav.Scrolled {
 }
 
 .dot.active {
-    background: #ffffff;
+    background: #FFFFFF;
 }
 
 /* about */
@@ -900,13 +900,13 @@ nav.Scrolled {
 }
 
 /* min-width 361px */
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
 
 }
 
 @media screen and (max-width: 412px) {
     
-}
+} */
 
 @media screen and (max-width: 476px) {
     svg text {
@@ -1051,7 +1051,7 @@ nav.Scrolled {
     }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
         
 }
 
@@ -1067,4 +1067,4 @@ nav.Scrolled {
     svg text {
         font-size: 3.5rem;
     }
-}
+} */
