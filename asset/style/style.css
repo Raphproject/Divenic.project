@@ -895,6 +895,11 @@ nav.Scrolled {
     box-shadow: rgba(0, 0, 0, .5);
 }
 
+.title {
+    font: bold 1.6rem transparent;
+    background: url("../img/dafi-bg.png") center;
+}
+
 @media screen and (max-width: 360px) {
 
 }

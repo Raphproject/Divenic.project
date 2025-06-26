@@ -16,11 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const scrollRightBtn = document.querySelector('.scroll-btn.right');
 
   setTimeout(() => {
-  // misalnya, kalau loading lebih dari 5 detik
   if (!mainContent || !mainContent.classList.contains("loaded")) {
     document.getElementById("preloader").style.display = "block";
     }
-  }, 5000); // 5 detik
+  }, 5000); // loading 5 detik
 
   window.addEventListener("error", function (e) {
     document.getElementById("fallback-page").style.display = "block";

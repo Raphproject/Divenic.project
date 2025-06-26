@@ -9,7 +9,9 @@ body {
     width: 100vw;
     height: 100vh;
     font: bold 1.25rem 'Lora', serif;
-    background: url('../img/dafi-bg.png') no-repeat center center; /* jika file folder naik satu, di bagian asset, cukup tambahkan (../) dan lokasi file akan keluar */
+    background: url('../img/dafi-bg.png') no-repeat center center; 
+    /* jika file folder naik satu, di bagian asset, cukup tambahkan (.) lalu (/) 
+    #banyak titik menentukan jauh lokasi .. menandakan 2 folder di atas file */
     background-size: cover;
 }
 
@@ -222,7 +224,7 @@ button a {
     
     .title {
         font-size: 4rem;
-        top: 20%;
+        top: 25%;
     }
 
     .title h4 {
@@ -231,11 +233,11 @@ button a {
 
     text {
         font-size: 1rem;
-        bottom: 38%;
+        bottom: 30%;
     }
 
     button {
-        font-size: 1,1rem;
-        bottom: 30%;
+        font-size: 1.1rem;
+        bottom: 22%;
     }
 }
