@@ -1,8 +1,0 @@
-h1 {
-    font-size: 10rem;
-    background: url("asset/dafi-bg.png") center;
-    background-size: contain;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
