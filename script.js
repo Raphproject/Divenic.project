@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 5000); // loading 5 detik
 
-  window.addEventListener("error", function (e) {
-    document.getElementById("fallback-page").style.display = "block";
-  });
-
   if (!introShown) {
     // Jika intro belum pernah ditampilkan, tampilkan intro
     intro.style.display = "flex";
@@ -77,8 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (scrollHeight > 30) {
       navbar.classList.add("Scrolled");
+      sidebar.classList.add("Scrolled");
     } else {
       navbar.classList.remove("Scrolled");
+      sidebar.classList.remove("Scrolled");
     }
   }
 

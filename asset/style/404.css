@@ -41,21 +41,21 @@ nav {
     padding: 0 15px;
     justify-content: flex-end;
     align-items: center;
-    gap: 1.17rem;
+    gap: 1.15rem;
 }
 
 .navlink {
     color: #B65D3D;
-    font: bold 1.25rem #B65D3D;
+    font-size: 1rem;
     text-decoration: none;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-menu .navlink:hover,
 .nav-menu .navlink.active {
     border-bottom: 4px solid #b65d3d;
     padding: 5px 0;
-    transition: all .390s ease-in-out;
+    transition: all 0.390s ease-in-out;
 }
 
 /* Responsive */
@@ -82,7 +82,7 @@ nav {
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     z-index: 5;
 }
 
@@ -153,7 +153,6 @@ nav {
     width: 100%;
     height: 100%;
     display: flex;
-    font-weight: bold;
     align-items: center;
     justify-content: center;
 }
@@ -164,7 +163,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -177,7 +176,7 @@ nav {
 }
 
 .title h4 {
-    font-size: 4.27rem;
+    font-size: 4.25rem;
 }
 
 text {
@@ -190,10 +189,10 @@ text {
 }
 
 button {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     position: absolute;
     left: 50%;
-    bottom: 28%;
+    bottom: 27.4%;
     transform: translateX(-50%);
     border-radius: 15px;
     background: linear-gradient(45deg, #FFBB76, #FF8C42);
@@ -219,7 +218,7 @@ button a {
     }
 
     .sidebar .menu {
-        font: bold 1.3rem #B65D3D;
+        font-size: 0.8rem;
     }
     
     .title {
@@ -238,6 +237,29 @@ button a {
 
     button {
         font-size: 1.1rem;
+        bottom: 22%;
+    }
+}
+
+/* Laptop resolusi 1366 x 768px */
+@media screen and (max-width: 1440px) {
+    .title {
+        font-size: 4.8rem;
+        top: 25%;
+    }
+
+    .title h4 {
+        font-size: 2.4rem;
+        top: 30%;
+    }
+
+    text {
+        font-size: 1rem;
+        bottom: 34%;
+    }
+
+    button {
+        font-size: 1rem;
         bottom: 22%;
     }
 }
