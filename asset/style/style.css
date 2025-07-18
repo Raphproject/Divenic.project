@@ -902,6 +902,40 @@ nav.Scrolled {
     background: url("../img/dafi-bg.png") center;
 }
 
+.kaleidoskop-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 30px;
+}
+
+.kaleidoskop-title {
+    font: bold 2.75rem transparent;
+    background: url("../img/dafi-bg.png") center;
+    background-size: cover;
+    background-clip: text;
+    /* -webkit-animation: text; masih belum tahu fungsinya */
+    color: transparent;
+}
+
+.kaleidoskop-video {
+    margin: 40px 20px;
+    max-width: 1250px;
+    width: 100%;
+    height: 100%;
+}
+
+.kaleidoskop-video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 3px solid rgba(36, 54, 66, .5);
+}
+
 @media screen and (max-width: 360px) {
 
 }
@@ -1058,20 +1092,96 @@ nav.Scrolled {
     }
 }
 
-/* @media screen and (max-width: 600px) {
-        
-}
-
-@media screen and (max-width: 768px) {
-        
-}
-
-@media screen and (max-width: 1024px) {
-        
-}
-
-@media screen and (min-width: 1025px) {
-    svg text {
-        font-size: 3.5rem;
+/* Breakpoint Laptop resolusi 1366 x 768px */
+@media screen and (min-width: 990px) and (max-width: 1440px) {
+    .about-title {
+        font-size: 2.25rem;
     }
-} */
+
+    .about-section {
+        padding: 25px;
+    }
+
+    .about-container {
+        gap: 20px;
+    }
+
+    .about-content {
+        width: 360px;
+        height: 200px;
+    }
+
+    .about-item figcaption {
+        font-size: 1.75rem;
+    }
+
+    .about-content:hover > .desc-item {
+        transform: translateY(-125px);
+    }
+
+    .desc-item {
+        font-size: 1rem;
+    }
+
+    .about-content:hover {
+        height: 320px;
+    }
+
+    .event-title {
+        font-size: 2.25rem;
+    }
+
+    .event-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 15px;
+        gap: 5px;
+    }
+
+    .event-item {
+        width: 350px;
+        height: 225px;
+    }
+
+    .mentor-title {
+        font-size: 2.25rem;
+    }
+
+    .mentor-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .mentor-card {
+        width: 180px;
+        height: 260px;
+    }
+
+    .member-title {
+        font-size: 2.25rem;
+    }
+
+    .member-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 30px;
+        gap: 50px
+    }
+
+    .member-card {
+        width: 180px;
+        height: 260px;
+    }
+
+    .gallery-title {
+        font-size: 2.25rem;
+    }
+
+    .kaleidoskop-title {
+        font-size: 2.25rem;
+    }
+
+    .kaleidoskop-video {
+        width: 70%;
+    }
+}
